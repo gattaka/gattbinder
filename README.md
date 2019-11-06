@@ -24,7 +24,7 @@ Example of use:
 		<build>
 			<plugins>
 	 
-				<!-- Not required (gattbinder uses Google AutoService) but Eclipse doesn't work without it -->
+				<!-- Runs the processor -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
