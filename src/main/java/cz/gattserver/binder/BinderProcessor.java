@@ -45,10 +45,11 @@ public class BinderProcessor extends AbstractProcessor {
 		}
 		return true;
 	}
-	
-//	private List<VariableElement> tryGatherParentFields(Element element) {
-//		List<VariableElement> fields = ElementFilter.fieldsIn(element.getEnclosingElement());
-//	}
+
+	// private List<VariableElement> tryGatherParentFields(Element element) {
+	// List<VariableElement> fields =
+	// ElementFilter.fieldsIn(element.getEnclosingElement());
+	// }
 
 	private void writeFile(String className, List<VariableElement> fields) throws IOException {
 		System.out.println("\tClass: " + className);
@@ -59,7 +60,7 @@ public class BinderProcessor extends AbstractProcessor {
 			packageName = className.substring(0, lastDot);
 		}
 
-		String simpleClassName = className.substring(lastDot + 1);
+		// String simpleClassName = className.substring(lastDot + 1);
 		String bindClassName = className + "Bind";
 		String bindSimpleClassName = bindClassName.substring(lastDot + 1);
 
