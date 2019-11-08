@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedSourceVersion;
@@ -20,8 +21,11 @@ import javax.lang.model.util.ElementFilter;
 import javax.lang.model.util.Types;
 import javax.tools.JavaFileObject;
 
+import com.google.auto.service.AutoService;
+
 @SupportedAnnotationTypes("cz.gattserver.binder.GenerateBinding")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
+@AutoService(Processor.class)
 public class BinderProcessor extends AbstractProcessor {
 
 	private int level = 0;
